@@ -21,5 +21,5 @@ else
 	cd $web
 	cd $(date +"%m-%d-%Y")
 	nuclei -t /root/nuclei-templates/ -l all-live.txt -es info -o nucleiall.txt
-	cat all.txt | gauplus -subs -b png,jpg,gif,jpeg,swf,woff,gif,svg -o allUrls.txt ; cat allUrls.txt | httpx -mc 200,403 -o liveallurls.txt
+	cat all.txt | gauplus -subs -b png,jpg,gif,jpeg,swf,woff,svg -o allUrls.txt ; cat allUrls.txt | httpx -mc 200,403 -o liveallurls.txt
 fi
