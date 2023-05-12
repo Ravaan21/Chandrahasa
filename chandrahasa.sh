@@ -17,7 +17,7 @@ if [ $web == "-h" ]
 then
 	echo "Usage: ./chandrahasa website.com"
 else
-	./subdomainer -t $web -f true
+	./subdomainer.py -t $web -f true
 	cd $web
 	cd $(date +"%m-%d-%Y")
 	nuclei -t /root/nuclei-templates/ -l all-live.txt -es info -o nucleiall.txt
